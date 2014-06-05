@@ -6,7 +6,7 @@ require 'devoops/rails/version'
 Gem::Specification.new do |spec|
   spec.name          = "devoops-rails"
   spec.version       = Devoops::Rails::VERSION
-  spec.authors       = ["Dener W P do Carmo"]
+  spec.authors       = ["Dener W P do Carmo", "Erick Pereira"]
   spec.email         = ["dener.wilian@gmail.com"]
   spec.summary       = ["gem for devoops"]
   spec.description   = ["gem for devoops"]
