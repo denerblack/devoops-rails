@@ -13,7 +13,7 @@ Gem::Specification.new do |spec|
   spec.homepage      = %q{https://github.com/denerblack/devoops-rails}
   spec.license       = "MIT"
 
-	spec.files         = Dir["{lib/vendor/**/*}"]
+	spec.files         = Dir["{app,lib}/**/*"] + ["LICENSE.txt", "Rakefile", "README.md", "Gemfile"]
 #  spec.files         = `git ls-files -z`.split("\x0")
 #  spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
 #  spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
