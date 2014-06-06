@@ -1,6 +1,6 @@
 # Devoops::Rails
 
-Made for use devoops template
+Made for use [devoops template (bootstrap v3)](https://github.com/devoopsme/devoops)
 
 ## Installation
 
@@ -57,7 +57,7 @@ Also add the following to your application.css:
 *= require devoops-rails/devoops
 */
 ```
-
+Just using basic components. Fullcalendar, tinymce, xcharts, fineuploader, fancybox and others plugins are not implemented yet.
 To test devoops layout, use the same code in the index.html from root path of devoops source.
 
 ## Contributing
