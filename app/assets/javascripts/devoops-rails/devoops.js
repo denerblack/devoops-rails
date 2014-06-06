@@ -1,3 +1,7 @@
+//
+//    Main script of DevOOPS v1.0 Bootstrap Theme
+//
+"use strict";
 /*-------------------------------------------
   Main scripts used by theme
 ---------------------------------------------*/
@@ -215,8 +219,43 @@ function DrawKnob(elem){
       }
     }
   });
-
-  //
+  // Example of infinite knob, iPod click wheel
+  var v;
+  var up = 0;
+  var down=0;
+  var i=0;
+  var $idir = $("div.idir");
+  var $ival = $("div.ival");
+  var incr = function() { i++; $idir.show().html("+").fadeOut(); $ival.html(i); }
+  var decr = function() { i--; $idir.show().html("-").fadeOut(); $ival.html(i); };
+  $("input.infinite").knob(
+    {
+      min : 0,
+      max : 20,
+      stopper : false,
+      change : function () {
+        if(v > this.cv){
+          if(up){
+            decr();
+            up=0;
+          } else {
+            up=1;down=0;
+          }
+        } else {
+          if(v < this.cv){
+            if(down){
+              incr();
+              down=0;
+            } else {
+              down=1;up=0;
+            }
+          }
+        }
+        v = this.cv;
+      }
+    });
+}
+//
 // Create OpenLayers map with required options and return map as object
 //
 function drawMap(lon, lat, elem, layers) {
@@ -2155,4 +2194,5 @@ $(document).ready(function () {
     OpenModalBox(header, form, button);
   });
 });
+
 

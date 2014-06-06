@@ -1,6 +1,6 @@
 # Devoops::Rails
 
-Made for use devoops template
+Made for use [devoops template (bootstrap v3)](https://github.com/devoopsme/devoops)
 
 ## Installation
 
@@ -27,16 +27,38 @@ source 'https://rails-assets.org'
 And include the dependencies in Gemfile:
 
 ```ruby
-gem 'bootstrap-sass', '~> 3.0.3.0'
+gem 'rails-assets-bootstrap', '3.1.0'
+gem 'rails-bootstrap-helpers'
+gem 'bootstrap-datepicker-rails', '~> 1.3.0.1'
 gem "font-awesome-rails"
-gem 'fancybox2-rails', '~> 0.2.8'
-gem 'rails-assets-moment'
-gem 'rails-assets-fullcalendar'
-gem "select2-rails"
-gem 'jquery-ui-rails'
+gem 'rails-assets-jquery', '2.1.0'
+gem 'rails-assets-jquery-ui', '1.10.4'
 ```
 
-TODO: Write usage instructions here
+Add the following to your application.js:
+
+```ruby
+//= require jquery
+//= require jquery-ui
+//= require turbolinks
+//= require bootstrap
+//= require devoops-rails/devoops
+//= require_tree .
+```
+
+Also add the following to your application.css:
+
+```ruby
+*= require_self
+*= require_tree .
+*= require bootstrap
+*= require jquery-ui
+*= require font-awesome
+*= require devoops-rails/devoops
+*/
+```
+Just using basic components. Fullcalendar, tinymce, xcharts, fineuploader, fancybox and others plugins are not implemented yet.
+To test devoops layout, use the same code in the index.html from root path of devoops source.
 
 ## Contributing
 
