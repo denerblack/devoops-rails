@@ -2065,11 +2065,7 @@ $(document).ready(function () {
     $('div#main').toggleClass('sidebar-show');
     setTimeout(MessagesMenuWidth, 250);
   });
-  var ajax_url = location.hash.replace(/^#/, '');
-  if (ajax_url.length < 1) {
-    ajax_url = 'ajax/dashboard.html';
-  }
-  LoadAjaxContent(ajax_url);
+
   $('.main-menu').on('click', 'a', function (e) {
     var parents = $(this).parents('li');
     var li = $(this).closest('li.dropdown');
